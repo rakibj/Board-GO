@@ -45,10 +45,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   geometry: {fileID: 146316285104064066}
-  scaleTime: 0.3
+  linkPrefab: {fileID: 5072645636102599514, guid: 0ea34329b63e3e5409480a1f7b1919eb,
+    type: 3}
+  scaleTime: 0.5
   easeType: 15
   autoRun: 1
-  delay: 0.25
+  delay: 0.1
+  obstacleLayer:
+    serializedVersion: 2
+    m_Bits: 512
 --- !u!1001 &8153271197165215563
 PrefabInstance:
   m_ObjectHideFlags: 0

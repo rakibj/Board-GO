@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using UnityEngine;
 
 namespace _BoardGo.Scripts.Player
@@ -10,24 +11,33 @@ namespace _BoardGo.Scripts.Player
         public iTween.EaseType easeType;
         public float moveSpeed = 1.5f;
         public float iTweenDelay = 0f;
+        private Board.Board m_board;
+
+        private void Awake()
+        {
+            m_board = FindObjectOfType<Board.Board>();
+        }
 
         private void Start()
         {
+            UpdateBoard();
+            if (m_board != null && m_board.PlayerNode != null)
+            {
+                m_board.PlayerNode.InitNode();
+            }
+            
         }
 
-        IEnumerator Test()
-        {
-            yield return new WaitForSeconds(1);
-            MoveRight();
-            yield return new WaitForSeconds(2);
-            MoveRight();
-            yield return new WaitForSeconds(2);
-            MoveForward();
-            yield return new WaitForSeconds(2);
-            MoveForward();
-        }
         public void Move(Vector3 destinationPos, float delayTime = .25f)
         {
+            if (m_board != null)
+            {
+                var targetNode = m_board.FindNodeAt(destinationPos);
+                if (targetNode == null)
+                    return;
+                if (!m_board.PlayerNode.LinkedNodes.Contains(targetNode))
+                    return;
+            }
             StartCoroutine(MoveRoutine(destinationPos, delayTime));
         }
         private IEnumerator MoveRoutine(Vector3 destinationPos, float delayTime)
@@ -52,26 +62,33 @@ namespace _BoardGo.Scripts.Player
             iTween.Stop(gameObject);
             transform.position = destinationPos;
             isMoving = false;
+            UpdateBoard();
         }
         public void MoveLeft()
         {
-            var newPosition = transform.position + new Vector3(-2, 0, 0);
+            var newPosition = transform.position + new Vector3(-Board.Board.spacing, 0, 0);
             Move(newPosition, 0);
         }
         public void MoveRight()
         {
-            var newPosition = transform.position + new Vector3(2, 0, 0);
+            var newPosition = transform.position + new Vector3(Board.Board.spacing, 0, 0);
             Move(newPosition, 0);
         }
         public void MoveForward()
         {
-            var newPosition = transform.position + new Vector3(0, 0, 2);
+            var newPosition = transform.position + new Vector3(0, 0, Board.Board.spacing);
             Move(newPosition, 0);
         }
         public void MoveBackward()
         {
-            var newPosition = transform.position + new Vector3(0, 0, -2);
+            var newPosition = transform.position + new Vector3(0, 0, -Board.Board.spacing);
             Move(newPosition, 0);
+        }
+
+        private void UpdateBoard()
+        {
+            if (m_board != null)
+                m_board.UpdatePlayerNode();
         }
     }
 }

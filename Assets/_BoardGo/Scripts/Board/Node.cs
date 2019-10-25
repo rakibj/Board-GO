@@ -13,14 +13,19 @@ namespace _BoardGo.Scripts.Board
         private List<Node> m_neighborNodes;
         public List<Node> NeighborNodes => m_neighborNodes;
 
+        private List<Node> m_linkedNodes = new List<Node>();
+        public List<Node> LinkedNodes => m_linkedNodes;
+        
         private Board m_board;
         
         public GameObject geometry;
+        public GameObject linkPrefab;
         public float scaleTime = 0.3f;
         public iTween.EaseType easeType = iTween.EaseType.easeInExpo;
 
-        public bool autoRun = false;
         public float delay = 1f;
+        public LayerMask obstacleLayer;
+        
         private bool m_isInitialized = false;
 
         private void Awake()
@@ -33,8 +38,6 @@ namespace _BoardGo.Scripts.Board
             if (geometry != null)
             {
                 geometry.transform.localScale = Vector3.zero;
-                if (autoRun)
-                    InitNode();
 
                 if (m_board != null)
                     m_neighborNodes = FindNeighbors(m_board.AllNodes);
@@ -63,7 +66,6 @@ namespace _BoardGo.Scripts.Board
             }
             return nNodes;
         }
-
         public void InitNode()
         {
             if (!m_isInitialized)
@@ -73,19 +75,62 @@ namespace _BoardGo.Scripts.Board
                 m_isInitialized = true; 
             }
         }
-
         private void InitNeighbors()
         {
             StartCoroutine(InitNeighborsRoutine());
         }
-
         private IEnumerator InitNeighborsRoutine()
         {
             yield return new WaitForSeconds(delay);
             foreach (var neighborNode in m_neighborNodes)
             {
-                neighborNode.InitNode();
+                if (!m_linkedNodes.Contains(neighborNode))
+                {
+                    Obstacle obstacle = FindObstacle(neighborNode);
+                    if (obstacle == null)
+                    {
+                        LinkNode(neighborNode);
+                        neighborNode.InitNode();
+                    }
+                }
             }
         }
+
+        private void LinkNode(Node targetNode)
+        {
+            if (linkPrefab != null)
+            {
+                GameObject linkInstance = Instantiate(linkPrefab, transform.position, Quaternion.identity);
+                linkInstance.transform.parent = transform;
+                Link link = linkInstance.GetComponent<Link>();
+                if (link != null)
+                {
+                    link.DrawLink(transform.position, targetNode.transform.position);
+                }
+
+                if (!m_linkedNodes.Contains(targetNode))
+                {
+                    m_linkedNodes.Add(targetNode);
+                }
+
+                if (!targetNode.LinkedNodes.Contains(this))
+                {
+                    targetNode.LinkedNodes.Add(this);
+                }
+            }
+        }
+
+        private Obstacle FindObstacle(Node targetNode)
+        {
+            Vector3 checkDirection = targetNode.transform.position - transform.position;
+            RaycastHit hit;
+            if (Physics.Raycast(transform.position, checkDirection, out hit, Board.spacing + .1f, obstacleLayer))
+            {
+                return hit.collider.GetComponent<Obstacle>();
+            }
+
+            return null;
+        }
+        
     }
 }

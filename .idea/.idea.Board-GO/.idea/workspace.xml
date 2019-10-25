@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2cc1184b-306f-4cc6-babc-5586d780842c" name="Default Changelist" comment="" />
@@ -12,14 +12,15 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/Assets/_BoardGo/Scripts/Board/Link.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/_BoardGo/Scripts/Player/PlayerManager.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/_BoardGo/Scripts/Player/PlayerMover.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/_BoardGo/Scripts/Generic/Utility.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/_BoardGo/Scripts/Board/Obstacle.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_BoardGo/Scripts/Generic/IInput.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_BoardGo/Scripts/Board/Board.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/_BoardGo/Scripts/Board/Link.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_BoardGo/Scripts/Player/PlayerInputKeyboard.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/_BoardGo/Scripts/Player/PlayerManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_BoardGo/Scripts/Board/Node.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/_BoardGo/Scripts/Player/PlayerMover.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/_BoardGo/Scripts/Generic/Utility.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -31,13 +32,14 @@
         <option value="$PROJECT_DIR$/Assets/_BoardGo/Scripts/PlayerManager.cs" />
         <option value="$PROJECT_DIR$/Assets/_BoardGo/Scripts/Player/PlayerInput.cs" />
         <option value="$PROJECT_DIR$/Assets/_BoardGo/Scripts/Player/PlayerManager.cs" />
-        <option value="$PROJECT_DIR$/Assets/_BoardGo/Scripts/Player/PlayerMover.cs" />
         <option value="$PROJECT_DIR$/Assets/_BoardGo/Scripts/Generic/IInput.cs" />
         <option value="$PROJECT_DIR$/Assets/_BoardGo/Scripts/Player/PlayerInputKeyboard.cs" />
-        <option value="$PROJECT_DIR$/Assets/_BoardGo/Scripts/Board/Board.cs" />
         <option value="$PROJECT_DIR$/Assets/_BoardGo/Scripts/Generic/Utility.cs" />
-        <option value="$PROJECT_DIR$/Assets/_BoardGo/Scripts/Board/Node.cs" />
         <option value="$PROJECT_DIR$/Assets/_BoardGo/Scripts/Board/Link.cs" />
+        <option value="$PROJECT_DIR$/Assets/_BoardGo/Scripts/Board/Obstacle.cs" />
+        <option value="$PROJECT_DIR$/Assets/_BoardGo/Scripts/Board/Node.cs" />
+        <option value="$PROJECT_DIR$/Assets/_BoardGo/Scripts/Board/Board.cs" />
+        <option value="$PROJECT_DIR$/Assets/_BoardGo/Scripts/Player/PlayerMover.cs" />
       </list>
     </option>
   </component>
@@ -47,6 +49,7 @@
     <property name="Rider.DefaultBreakpoints.AreToggled" value="true" />
     <property name="Rider.ProjectViewActivator.IsNotFirstRun" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="do_not_show_Android_plugin_suggestion" value="true" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -83,7 +86,9 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1572016359450</updated>
-      <workItem from="1572016364547" duration="11203000" />
+      <workItem from="1572016364547" duration="11491000" />
+      <workItem from="1572037853809" duration="745000" />
+      <workItem from="1572040137106" duration="3763000" />
     </task>
     <servers />
   </component>
@@ -94,7 +99,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
