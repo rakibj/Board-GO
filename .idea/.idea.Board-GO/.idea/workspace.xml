@@ -11,6 +11,16 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/_BoardGo/Scripts/Board/Link.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/_BoardGo/Scripts/Player/PlayerManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/_BoardGo/Scripts/Player/PlayerMover.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/_BoardGo/Scripts/Generic/Utility.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/_BoardGo/Scripts/Generic/IInput.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/_BoardGo/Scripts/Board/Board.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/_BoardGo/Scripts/Player/PlayerInputKeyboard.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/_BoardGo/Scripts/Board/Node.cs" root0="FORCE_HIGHLIGHTING" />
+  </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
@@ -19,6 +29,15 @@
         <option value="$PROJECT_DIR$/Assets/_BoardGo/Scripts/PlayerMover.cs" />
         <option value="$PROJECT_DIR$/Assets/_BoardGo/Scripts/PlayerInput.cs" />
         <option value="$PROJECT_DIR$/Assets/_BoardGo/Scripts/PlayerManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/_BoardGo/Scripts/Player/PlayerInput.cs" />
+        <option value="$PROJECT_DIR$/Assets/_BoardGo/Scripts/Player/PlayerManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/_BoardGo/Scripts/Player/PlayerMover.cs" />
+        <option value="$PROJECT_DIR$/Assets/_BoardGo/Scripts/Generic/IInput.cs" />
+        <option value="$PROJECT_DIR$/Assets/_BoardGo/Scripts/Player/PlayerInputKeyboard.cs" />
+        <option value="$PROJECT_DIR$/Assets/_BoardGo/Scripts/Board/Board.cs" />
+        <option value="$PROJECT_DIR$/Assets/_BoardGo/Scripts/Generic/Utility.cs" />
+        <option value="$PROJECT_DIR$/Assets/_BoardGo/Scripts/Board/Node.cs" />
+        <option value="$PROJECT_DIR$/Assets/_BoardGo/Scripts/Board/Link.cs" />
       </list>
     </option>
   </component>
@@ -64,7 +83,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1572016359450</updated>
-      <workItem from="1572016364547" duration="5546000" />
+      <workItem from="1572016364547" duration="11203000" />
     </task>
     <servers />
   </component>

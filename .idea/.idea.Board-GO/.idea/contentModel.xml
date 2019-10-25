@@ -10,11 +10,17 @@
       <e p="Assets" t="Include">
         <e p="_BoardGo" t="Include">
           <e p="Scripts" t="Include">
+            <e p="Board" t="Include">
+              <e p="Board.cs" t="Include" />
+              <e p="Link.cs" t="Include" />
+              <e p="Node.cs" t="Include" />
+            </e>
             <e p="Generic" t="Include">
               <e p="IInput.cs" t="Include" />
+              <e p="Utility.cs" t="Include" />
             </e>
             <e p="Player" t="Include">
-              <e p="PlayerInput.cs" t="Include" />
+              <e p="PlayerInputKeyboard.cs" t="Include" />
               <e p="PlayerManager.cs" t="Include" />
               <e p="PlayerMover.cs" t="Include" />
             </e>
