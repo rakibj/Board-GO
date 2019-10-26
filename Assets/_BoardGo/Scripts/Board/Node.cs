@@ -25,7 +25,7 @@ namespace _BoardGo.Scripts.Board
 
         public float delay = 1f;
         public LayerMask obstacleLayer;
-        
+        public bool isLevelGoal = false;        
         private bool m_isInitialized = false;
 
         private void Awake()
@@ -131,6 +131,8 @@ namespace _BoardGo.Scripts.Board
 
             return null;
         }
+
+        
         
     }
 }

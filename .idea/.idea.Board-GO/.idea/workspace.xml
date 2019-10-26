@@ -15,11 +15,13 @@
     <setting file="file://$PROJECT_DIR$/Assets/_BoardGo/Scripts/Board/Obstacle.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_BoardGo/Scripts/Generic/IInput.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_BoardGo/Scripts/Board/Board.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/_BoardGo/Scripts/Generic/GameManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_BoardGo/Scripts/Board/Link.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_BoardGo/Scripts/Player/PlayerInputKeyboard.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_BoardGo/Scripts/Player/PlayerManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_BoardGo/Scripts/Board/Node.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_BoardGo/Scripts/Player/PlayerMover.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/_BoardGo/Scripts/Board/Spinner.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_BoardGo/Scripts/Generic/Utility.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
@@ -37,9 +39,11 @@
         <option value="$PROJECT_DIR$/Assets/_BoardGo/Scripts/Generic/Utility.cs" />
         <option value="$PROJECT_DIR$/Assets/_BoardGo/Scripts/Board/Link.cs" />
         <option value="$PROJECT_DIR$/Assets/_BoardGo/Scripts/Board/Obstacle.cs" />
+        <option value="$PROJECT_DIR$/Assets/_BoardGo/Scripts/Board/Spinner.cs" />
+        <option value="$PROJECT_DIR$/Assets/_BoardGo/Scripts/Player/PlayerMover.cs" />
         <option value="$PROJECT_DIR$/Assets/_BoardGo/Scripts/Board/Node.cs" />
         <option value="$PROJECT_DIR$/Assets/_BoardGo/Scripts/Board/Board.cs" />
-        <option value="$PROJECT_DIR$/Assets/_BoardGo/Scripts/Player/PlayerMover.cs" />
+        <option value="$PROJECT_DIR$/Assets/_BoardGo/Scripts/Generic/GameManager.cs" />
       </list>
     </option>
   </component>
@@ -88,7 +92,8 @@
       <updated>1572016359450</updated>
       <workItem from="1572016364547" duration="11491000" />
       <workItem from="1572037853809" duration="745000" />
-      <workItem from="1572040137106" duration="3763000" />
+      <workItem from="1572040137106" duration="4543000" />
+      <workItem from="1572054275804" duration="4477000" />
     </task>
     <servers />
   </component>

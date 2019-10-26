@@ -22,12 +22,19 @@ namespace _BoardGo.Scripts.Board
 
         private Node m_playerNode;
         public Node PlayerNode => m_playerNode;
-
+        private Node m_goalNode;
+        public Node GoalNode => m_goalNode;
+        public GameObject goalPrefab;
+        public float drawGoalTime = 2f;
+        public float drawGoalDelay = 2f;
+        public iTween.EaseType drawGoalEaseType = iTween.EaseType.easeOutExpo;
+        
         private PlayerMover m_player;
         private void Awake()
         {
             m_player = FindObjectOfType<PlayerMover>();
             GetNodeList();
+            m_goalNode = FindGoalNode();
         }
 
         private void GetNodeList()
@@ -56,6 +63,31 @@ namespace _BoardGo.Scripts.Board
         {
             m_playerNode = FindPlayerNode();
         }
+        public Node FindGoalNode()
+        {
+            return m_allNodes.Find(n => n.isLevelGoal);
+        }
+
+        public void DrawGoal()
+        {
+            if (goalPrefab != null && m_goalNode != null)
+            {
+                GameObject goalInstance = Instantiate(goalPrefab, m_goalNode.transform.position, Quaternion.identity);
+                iTween.ScaleFrom(goalInstance, iTween.Hash(
+                    "scale", Vector3.zero,
+                    "time", drawGoalTime,
+                    "delay", drawGoalDelay,
+                    "easetype", drawGoalEaseType
+                    ));
+            }
+        }
         
+        public void InitBoard()
+        {
+            if (m_playerNode != null)
+            {
+                m_playerNode.InitNode();
+            }
+        }
     }
 }

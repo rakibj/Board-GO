@@ -19,8 +19,12 @@ namespace _BoardGo.Scripts.Player
         public void GetInput()
         {
             if (!m_inputEnabled)
-                return; 
-            
+            {
+                m_h = 0;
+                m_v = 0;
+                return;
+            }
+
             m_h = Input.GetAxisRaw("Horizontal");
             m_v = Input.GetAxisRaw("Vertical");
         }

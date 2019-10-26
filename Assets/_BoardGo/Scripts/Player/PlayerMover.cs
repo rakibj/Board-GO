@@ -21,10 +21,7 @@ namespace _BoardGo.Scripts.Player
         private void Start()
         {
             UpdateBoard();
-            if (m_board != null && m_board.PlayerNode != null)
-            {
-                m_board.PlayerNode.InitNode();
-            }
+            
             
         }
 
