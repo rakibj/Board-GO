@@ -23,6 +23,7 @@
               <e p="Utility.cs" t="Include" />
             </e>
             <e p="Player" t="Include">
+              <e p="PlayerCompass.cs" t="Include" />
               <e p="PlayerInputKeyboard.cs" t="Include" />
               <e p="PlayerManager.cs" t="Include" />
               <e p="PlayerMover.cs" t="Include" />
