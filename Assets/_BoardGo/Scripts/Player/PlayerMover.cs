@@ -12,10 +12,11 @@ namespace _BoardGo.Scripts.Player
         public float moveSpeed = 1.5f;
         public float iTweenDelay = 0f;
         private Board.Board m_board;
-
+        private PlayerCompass m_playerCompass;
         private void Awake()
         {
             m_board = FindObjectOfType<Board.Board>();
+            m_playerCompass = FindObjectOfType<PlayerCompass>();
         }
 
         private void Start()
@@ -39,6 +40,7 @@ namespace _BoardGo.Scripts.Player
         }
         private IEnumerator MoveRoutine(Vector3 destinationPos, float delayTime)
         {
+            if(m_playerCompass != null) m_playerCompass.ShowArrows(false);
             isMoving = true;
             destination = destinationPos;
             yield return new WaitForSeconds(delayTime);
@@ -60,6 +62,7 @@ namespace _BoardGo.Scripts.Player
             transform.position = destinationPos;
             isMoving = false;
             UpdateBoard();
+            if(m_playerCompass != null) m_playerCompass.ShowArrows(true);
         }
         public void MoveLeft()
         {

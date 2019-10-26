@@ -48,6 +48,9 @@ MonoBehaviour:
   scale: 1
   startDistance: 0.3
   endDistance: 0.5
+  moveTime: 1
+  easeType: 17
+  delay: 0
 --- !u!1 &8481395255458783435
 GameObject:
   m_ObjectHideFlags: 0
@@ -136,6 +139,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Hitman
+      objectReference: {fileID: 0}
+    - target: {fileID: 6421038799084571653, guid: e9add6c0fd9934005b30c71f9718f31d,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 6415773578324094709, guid: e9add6c0fd9934005b30c71f9718f31d,
         type: 3}

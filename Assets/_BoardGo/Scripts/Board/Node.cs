@@ -60,12 +60,22 @@ namespace _BoardGo.Scripts.Board
             List<Node> nNodes = new List<Node>();
             foreach (var dir in Board.directions)
             {
-                var foundNeighbor = nodes.Find(n => n.Coordinate == Coordinate + dir);
+                var foundNeighbor = FindNeighborAt(nodes, dir);
                 if (foundNeighbor != null && !nNodes.Contains(foundNeighbor))
                     nNodes.Add(foundNeighbor);
             }
             return nNodes;
         }
+
+        public Node FindNeighborAt(List<Node> nodes, Vector2 dir)
+        {
+            return nodes.Find(n => n.Coordinate == Coordinate + dir);
+        }
+        public Node FindNeighborAt(Vector2 dir)
+        {
+            return FindNeighborAt(m_neighborNodes, dir);
+        }
+
         public void InitNode()
         {
             if (!m_isInitialized)

@@ -52,12 +52,56 @@ namespace _BoardGo.Scripts.Player
                 ));
         }
 
+        private void ResetArrows()
+        {
+            for (int i = 0; i < Board.Board.directions.Length; i++)
+            {
+                iTween.Stop(m_arrows[i]);
+                var dirVector = new Vector3(Board.Board.directions[i].normalized.x, 0f,
+                    Board.Board.directions[i].normalized.y);
+                m_arrows[i].transform.position = transform.position + dirVector * startDistance;
+            }
+        }
+
         private void MoveArrows()
         {
             foreach (var arrow in m_arrows)
             {
                 MoveArrow(arrow);
             }
+        }
+
+        public void ShowArrows(bool state)
+        {
+            if (m_board == null)
+            {
+                Debug.LogWarning("PlayerCompass.cs: No Board Found");
+                return;
+            }
+            if (m_arrows == null || m_arrows.Count != Board.Board.directions.Length)
+            {
+                Debug.LogWarning("PlayerCompass.cs: No Arrows Found");
+                return;
+            }
+
+            if (m_board.PlayerNode != null)
+            {
+                for (int i = 0; i < Board.Board.directions.Length; i++)
+                {
+                    var neighbor = m_board.PlayerNode.FindNeighborAt(Board.Board.directions[i]);
+                    if (neighbor == null || !state)
+                    {
+                        m_arrows[i].SetActive(false);
+                    }
+                    else
+                    {
+                        var activeState = m_board.PlayerNode.LinkedNodes.Contains(neighbor);
+                        m_arrows[i].SetActive(activeState);
+                    }
+                }
+            }
+            ResetArrows();
+            MoveArrows();
         }
     }
 }
