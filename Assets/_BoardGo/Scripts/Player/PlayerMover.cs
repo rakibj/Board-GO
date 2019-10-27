@@ -28,7 +28,7 @@ namespace _BoardGo.Scripts.Player
             yield return StartCoroutine(base.MoveRoutine(destinationPos, delayTime));
             UpdateBoard();
             if(m_playerCompass != null) m_playerCompass.ShowArrows(true);
-            GameEvents.Instance.OnPlayerMoveFinish();
+            finishMovementEvent.Invoke();
         }
 
         private void UpdateBoard()

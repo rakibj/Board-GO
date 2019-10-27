@@ -29,6 +29,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/_BoardGo/Scripts/Player/PlayerCompass.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_BoardGo/Scripts/Generic/Mover.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_BoardGo/Scripts/Generic/GameEvents.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/_BoardGo/Scripts/Generic/TurnManager.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -39,7 +40,6 @@
         <option value="$PROJECT_DIR$/Assets/_BoardGo/Scripts/PlayerInput.cs" />
         <option value="$PROJECT_DIR$/Assets/_BoardGo/Scripts/PlayerManager.cs" />
         <option value="$PROJECT_DIR$/Assets/_BoardGo/Scripts/Player/PlayerInput.cs" />
-        <option value="$PROJECT_DIR$/Assets/_BoardGo/Scripts/Player/PlayerManager.cs" />
         <option value="$PROJECT_DIR$/Assets/_BoardGo/Scripts/Generic/IInput.cs" />
         <option value="$PROJECT_DIR$/Assets/_BoardGo/Scripts/Generic/Utility.cs" />
         <option value="$PROJECT_DIR$/Assets/_BoardGo/Scripts/Board/Link.cs" />
@@ -47,15 +47,17 @@
         <option value="$PROJECT_DIR$/Assets/_BoardGo/Scripts/Board/Spinner.cs" />
         <option value="$PROJECT_DIR$/Assets/_BoardGo/Scripts/Board/Board.cs" />
         <option value="$PROJECT_DIR$/Assets/_BoardGo/Scripts/Player/PlayerInputKeyboard.cs" />
-        <option value="$PROJECT_DIR$/Assets/_BoardGo/Scripts/Generic/GameManager.cs" />
         <option value="$PROJECT_DIR$/Assets/_BoardGo/Scripts/Board/Node.cs" />
         <option value="$PROJECT_DIR$/Assets/_BoardGo/Scripts/Player/PlayerCompass.cs" />
-        <option value="$PROJECT_DIR$/Assets/_BoardGo/Scripts/Generic/Mover.cs" />
-        <option value="$PROJECT_DIR$/Assets/_BoardGo/Scripts/Enemy/EnemyMover.cs" />
-        <option value="$PROJECT_DIR$/Assets/_BoardGo/Scripts/Enemy/EnemyManager.cs" />
         <option value="$PROJECT_DIR$/Assets/_BoardGo/Scripts/Generic/GameEvents.cs" />
-        <option value="$PROJECT_DIR$/Assets/_BoardGo/Scripts/Player/PlayerMover.cs" />
         <option value="$PROJECT_DIR$/Assets/_BoardGo/Scripts/Enemy/EnemySensor.cs" />
+        <option value="$PROJECT_DIR$/Assets/_BoardGo/Scripts/Generic/TurnManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/_BoardGo/Scripts/Generic/Mover.cs" />
+        <option value="$PROJECT_DIR$/Assets/_BoardGo/Scripts/Generic/GameManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/_BoardGo/Scripts/Player/PlayerMover.cs" />
+        <option value="$PROJECT_DIR$/Assets/_BoardGo/Scripts/Player/PlayerManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/_BoardGo/Scripts/Enemy/EnemyManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/_BoardGo/Scripts/Enemy/EnemyMover.cs" />
       </list>
     </option>
   </component>
@@ -66,6 +68,7 @@
     <property name="Rider.ProjectViewActivator.IsNotFirstRun" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="do_not_show_Android_plugin_suggestion" value="true" />
+    <property name="settings.editor.selected.configurable" value="preferences.sourceCode.C#" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -108,6 +111,8 @@
       <workItem from="1572054275804" duration="5187000" />
       <workItem from="1572063356673" duration="3375000" />
       <workItem from="1572087288066" duration="5105000" />
+      <workItem from="1572109218346" duration="8738000" />
+      <workItem from="1572137056710" duration="3010000" />
     </task>
     <servers />
   </component>

@@ -5,13 +5,14 @@ namespace _BoardGo.Scripts.Player
 {
     [RequireComponent(typeof(PlayerMover))]
     [RequireComponent(typeof(IInput))]
-    public class PlayerManager : MonoBehaviour
+    public class PlayerManager : TurnManager
     {
         [HideInInspector] public PlayerMover playerMover;
         [HideInInspector] public IInput playerInput;
 
-        private void Awake()
+        protected override void Awake()
         {
+            base.Awake();
             playerMover = GetComponent<PlayerMover>();
             playerInput = GetComponent<IInput>();
             playerInput.InputEnabled = true;
@@ -19,7 +20,7 @@ namespace _BoardGo.Scripts.Player
 
         private void Update()
         {
-            if (playerMover.isMoving)
+            if (playerMover.isMoving || m_gameManager.CurrentTurn != Turn.Player)
                 return;
             
             //Input taking and moving

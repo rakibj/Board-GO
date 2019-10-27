@@ -2,9 +2,11 @@
 using _BoardGo.Scripts.Board;
 using _BoardGo.Scripts.Player;
 using UnityEngine;
+using UnityEngine.Events;
 
 namespace _BoardGo.Scripts.Generic
 {
+    
     public class Mover : MonoBehaviour
     {
         public bool faceDestination = false;
@@ -16,7 +18,7 @@ namespace _BoardGo.Scripts.Generic
         public float iTweenDelay = 0f;
         protected Board.Board m_board;
         protected Node m_currentNode;
-        
+        public UnityEvent finishMovementEvent; 
         protected virtual void Awake()
         {
             m_board = FindObjectOfType<Board.Board>();
@@ -101,7 +103,7 @@ namespace _BoardGo.Scripts.Generic
             }
         }
 
-        private void FaceDestination()
+        protected void FaceDestination()
         {
             var relativePosition = destination - transform.position;
             var newRotation = Quaternion.LookRotation(relativePosition);

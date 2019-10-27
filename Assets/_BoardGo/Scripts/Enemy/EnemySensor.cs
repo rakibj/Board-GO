@@ -18,16 +18,6 @@ namespace _BoardGo.Scripts.Enemy
             m_directionToSearch = new Vector3(0, 0, Board.Board.spacing);
         }
 
-        private void OnEnable()
-        {
-            GameEvents.Instance.onPlayerMoveFinish += UpdateSensor;
-        }
-
-        private void OnDisable()
-        {
-            GameEvents.Instance.onPlayerMoveFinish -= UpdateSensor;
-        }
-
         public void UpdateSensor()
         {
             var worldSpacePositionToSearch = transform.TransformVector(m_directionToSearch) + transform.position;
