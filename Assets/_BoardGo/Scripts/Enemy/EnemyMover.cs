@@ -9,7 +9,8 @@ namespace _BoardGo.Scripts.Enemy
     public enum MovementType
     {
         Sationary,
-        Patrol
+        Patrol,
+        Spinner
     }
 
     public class EnemyMover : Mover
@@ -37,8 +38,9 @@ namespace _BoardGo.Scripts.Enemy
                 case MovementType.Patrol:
                     Patrol();
                     break;
-                default:
-                    throw new ArgumentOutOfRangeException();
+                case MovementType.Spinner:
+                    Spin();
+                    break;
             }
         }
 
@@ -80,6 +82,21 @@ namespace _BoardGo.Scripts.Enemy
                     yield return new WaitForSeconds(rotateTime);
                 }
             }
+
+            base.finishMovementEvent.Invoke();
+        }
+
+        private void Spin()
+        {
+            StartCoroutine(SpinRoutine());
+        }
+
+        private IEnumerator SpinRoutine()
+        {
+            var localForward = new Vector3(0,0,Board.Board.spacing);
+            destination = transform.TransformVector(localForward * -1) + transform.position;
+            FaceDestination();
+            yield return new WaitForSeconds(rotateTime);
             base.finishMovementEvent.Invoke();
         }
     }

@@ -18,6 +18,7 @@ namespace _BoardGo.Scripts.Generic
         public float iTweenDelay = 0f;
         protected Board.Board m_board;
         protected Node m_currentNode;
+        public Node CurrentNode => m_currentNode;
         public UnityEvent finishMovementEvent; 
         protected virtual void Awake()
         {

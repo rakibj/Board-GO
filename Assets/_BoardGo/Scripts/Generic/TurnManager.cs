@@ -19,9 +19,12 @@ namespace _BoardGo.Scripts.Generic
             m_gameManager = FindObjectOfType<GameManager>();
         }
 
-        public void FinishTurn()
+        public virtual void FinishTurn()
         {
-            IsTurnComplete = true;
+            if (m_isTurnComplete)
+                return;
+            
+            m_isTurnComplete = true;
             if (m_gameManager != null) m_gameManager.UpdateTurn();
         }
     }

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using _BoardGo.Scripts.Enemy;
 using _BoardGo.Scripts.Player;
 using UnityEngine;
 
@@ -88,6 +89,20 @@ namespace _BoardGo.Scripts.Board
             {
                 m_playerNode.InitNode();
             }
+        }
+
+        public List<EnemyManager> FindEnemiesAt(Node node)
+        {
+            List<EnemyManager> foundEnemies = new List<EnemyManager>();
+            EnemyManager[] enemies = FindObjectsOfType<EnemyManager>();
+            foreach (var enemy in enemies)
+            {
+                EnemyMover mover = enemy.GetComponent<EnemyMover>();
+                if(mover.CurrentNode == node && !enemy.IsDead)
+                    foundEnemies.Add(enemy);    
+            }
+
+            return foundEnemies;
         }
     }
 }

@@ -1,4 +1,5 @@
-﻿using _BoardGo.Scripts.Generic;
+﻿using System.Text.RegularExpressions;
+using _BoardGo.Scripts.Generic;
 using UnityEngine;
 
 namespace _BoardGo.Scripts.Player
@@ -9,10 +10,11 @@ namespace _BoardGo.Scripts.Player
     {
         [HideInInspector] public PlayerMover playerMover;
         [HideInInspector] public IInput playerInput;
-
+        private Board.Board m_board;
         protected override void Awake()
         {
             base.Awake();
+            m_board = FindObjectOfType<Board.Board>();
             playerMover = GetComponent<PlayerMover>();
             playerInput = GetComponent<IInput>();
             playerInput.InputEnabled = true;
@@ -47,6 +49,31 @@ namespace _BoardGo.Scripts.Player
                     playerMover.MoveForward();
                 }
             }
+        }
+
+        private void CaptureEnemies()
+        {
+            if (m_board != null)
+            {
+                var enemies = m_board.FindEnemiesAt(m_board.PlayerNode);
+                if (enemies.Count != 0)
+                {
+                    foreach (var enemy in enemies)
+                    {
+                        if (enemy != null)
+                        {
+                            enemy.Die();
+                            Destroy(enemy.gameObject);
+                        }
+                    }
+                }
+            }
+        }
+
+        public override void FinishTurn()
+        {
+            CaptureEnemies();
+            base.FinishTurn();
         }
     }
 }

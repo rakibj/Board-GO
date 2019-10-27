@@ -35,6 +35,7 @@ namespace _BoardGo.Scripts.Generic
         public UnityEvent startLevelEvent;
         public UnityEvent playLevelEvent;
         public UnityEvent endLevelEvent;
+        public UnityEvent loseLevelEvent;
         
         private void Awake()
         {
@@ -129,8 +130,15 @@ namespace _BoardGo.Scripts.Generic
             }
             else if (m_currentTurn == Turn.Enemy)
             {
-                if(IsEnemyTurnComplete())
+                if (IsEnemyTurnComplete())
+                {
+                    Debug.Log("Enemy Turn Complete");
                     PlayPlayerTurn();
+                }
+                else
+                {
+                    Debug.Log("Enemy Turn not complete yet");
+                }
             }
         }
 
@@ -154,11 +162,25 @@ namespace _BoardGo.Scripts.Generic
         {
             foreach (var enemy in m_enemies)
             {
-                if (!enemy.IsTurnComplete)
+                if (!enemy.IsTurnComplete && !enemy.IsDead)
                     return false;
             }
 
             return true;
+        }
+
+        public void LoseLevel()
+        {
+            StartCoroutine(LoseLevelRoutine());
+        }
+
+        private IEnumerator LoseLevelRoutine()
+        {
+            m_isGameOver = true;
+            if(loseLevelEvent != null) loseLevelEvent.Invoke();
+            yield return new WaitForSeconds(2f);
+            Debug.Log("Lose===========");
+            RestartLevel();
         }
     }
 }
