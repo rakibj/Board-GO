@@ -11,6 +11,7 @@ namespace _BoardGo.Scripts.Enemy
         private Node m_nodeToSearch;
         private Board.Board m_board;
         private bool m_foundPlayer = false;
+        private Node m_currentNode;
         public bool FoundPlayer => m_foundPlayer;
         private void Awake()
         {
@@ -20,11 +21,13 @@ namespace _BoardGo.Scripts.Enemy
 
         public void UpdateSensor()
         {
+            
             var worldSpacePositionToSearch = transform.TransformVector(m_directionToSearch) + transform.position;
             if (m_board != null)
             {
+                m_currentNode = m_board.FindNodeAt(transform.position);
                 m_nodeToSearch = m_board.FindNodeAt(worldSpacePositionToSearch);
-                if (m_nodeToSearch == m_board.PlayerNode)
+                if (m_nodeToSearch == m_board.PlayerNode && m_currentNode.LinkedNodes.Contains(m_nodeToSearch) && !m_nodeToSearch.isLevelGoal)
                 {
                     m_foundPlayer = true;
                     Debug.Log("Found Player");

@@ -5,6 +5,7 @@
     <e p="C:\Users\Raisa IT\.Rider2019.2\system\extResources" t="IncludeRecursive" />
     <e p="C:\Users\Raisa IT\.Rider2019.2\system\resharper-host\local\Transient\ReSharperHost\v192\SolutionCaches\_Board-GO.2021346869.00" t="ExcludeRecursive" />
     <e p="E:\Projects\Board-GO" t="IncludeRecursive">
+      <e p="Assembly-CSharp-Editor.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp-firstpass.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
@@ -35,6 +36,95 @@
               <e p="PlayerInputKeyboard.cs" t="Include" />
               <e p="PlayerManager.cs" t="Include" />
               <e p="PlayerMover.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+        <e p="MMFeedbacks" t="Include">
+          <e p="Demos" t="Include">
+            <e p="Scripts" t="Include">
+              <e p="DemoBall.cs" t="Include" />
+            </e>
+          </e>
+          <e p="MMFeedbacks" t="Include">
+            <e p="Core" t="Include">
+              <e p="Editor" t="Include">
+                <e p="AttributeDrawers.cs" t="Include" />
+                <e p="MMFeedbacksEditor.cs" t="Include" />
+                <e p="MMFeedbackStyling.cs" t="Include" />
+              </e>
+              <e p="MMFeedback.cs" t="Include" />
+              <e p="MMFeedbacks.cs" t="Include" />
+              <e p="MMFeedbacksHelpers.cs" t="Include" />
+              <e p="MMFeedbackTiming.cs" t="Include" />
+              <e p="ObjectPool" t="Include">
+                <e p="MMMiniObjectPooler.cs" t="Include" />
+                <e p="MMMiniPoolableObject.cs" t="Include" />
+              </e>
+            </e>
+            <e p="Feedbacks" t="Include">
+              <e p="MMFeedbackAnimation.cs" t="Include" />
+              <e p="MMFeedbackCameraShake.cs" t="Include" />
+              <e p="MMFeedbackCameraZoom.cs" t="Include" />
+              <e p="MMFeedbackEvents.cs" t="Include" />
+              <e p="MMFeedbackFlash.cs" t="Include" />
+              <e p="MMFeedbackFlicker.cs" t="Include" />
+              <e p="MMFeedbackFreezeFrame.cs" t="Include" />
+              <e p="MMFeedbackInstantiateObject.cs" t="Include" />
+              <e p="MMFeedbackLight.cs" t="Include" />
+              <e p="MMFeedbackParticles.cs" t="Include" />
+              <e p="MMFeedbackParticlesInstantiation.cs" t="Include" />
+              <e p="MMFeedbackPosition.cs" t="Include" />
+              <e p="MMFeedbackRotation.cs" t="Include" />
+              <e p="MMFeedbackScale.cs" t="Include" />
+              <e p="MMFeedbackSetActive.cs" t="Include" />
+              <e p="MMFeedbackSound.cs" t="Include" />
+              <e p="MMFeedbackTimescaleModifier.cs" t="Include" />
+              <e p="MMFeedbackWiggle.cs" t="Include" />
+            </e>
+            <e p="Shakers" t="Include">
+              <e p="Editor" t="Include">
+                <e p="MMWiggleEditor.cs" t="Include" />
+              </e>
+              <e p="MMCameraShaker.cs" t="Include" />
+              <e p="MMCameraZoom.cs" t="Include" />
+              <e p="MMFlash.cs" t="Include" />
+              <e p="MMTimeManager.cs" t="Include" />
+              <e p="MMWiggle.cs" t="Include" />
+            </e>
+          </e>
+          <e p="MMFeedbacksForThirdParty" t="Include">
+            <e p="Cinemachine" t="Include">
+              <e p="Feedbacks" t="Include">
+                <e p="MMFeedbackCinemachineImpulse.cs" t="Include" />
+              </e>
+              <e p="Shakers" t="Include">
+                <e p="MMCinemachineCameraShaker.cs" t="Include" />
+                <e p="MMCinemachineZoom.cs" t="Include" />
+              </e>
+            </e>
+            <e p="NiceVibrations" t="Include">
+              <e p="Feedbacks" t="Include">
+                <e p="MMFeedbackHaptics.cs" t="Include" />
+              </e>
+            </e>
+            <e p="PostProcessing" t="Include">
+              <e p="Feedbacks" t="Include">
+                <e p="MMFeedbackBloom.cs" t="Include" />
+                <e p="MMFeedbackChromaticAberration.cs" t="Include" />
+                <e p="MMFeedbackColorGrading.cs" t="Include" />
+                <e p="MMFeedbackDepthOfField.cs" t="Include" />
+                <e p="MMFeedbackLensDistortion.cs" t="Include" />
+                <e p="MMFeedbackVignette.cs" t="Include" />
+              </e>
+              <e p="Shakers" t="Include">
+                <e p="MMAutoFocus.cs" t="Include" />
+                <e p="MMBloomShaker.cs" t="Include" />
+                <e p="MMChromaticAberrationShaker.cs" t="Include" />
+                <e p="MMColorGradingShaker.cs" t="Include" />
+                <e p="MMDepthOfFieldShaker.cs" t="Include" />
+                <e p="MMLensDistortionShaker.cs" t="Include" />
+                <e p="MMVignetteShaker.cs" t="Include" />
+              </e>
             </e>
           </e>
         </e>

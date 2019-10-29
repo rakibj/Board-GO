@@ -74,10 +74,14 @@ namespace _BoardGo.Scripts.Generic
 
         private IEnumerator PlayLevelRoutine()
         {
-            m_isGamePlaying = true;
-            yield return new WaitForSeconds(0);
-            m_player.playerInput.InputEnabled = true;
-            playLevelEvent?.Invoke();
+            if (!m_isGameOver)
+            {
+                m_isGamePlaying = true;
+                yield return new WaitForSeconds(0);
+                m_player.playerInput.InputEnabled = true;
+                playLevelEvent?.Invoke();
+            }
+
             while (!m_isGameOver)
             {
                 yield return null;
@@ -123,6 +127,9 @@ namespace _BoardGo.Scripts.Generic
 
         public void UpdateTurn()
         {
+            if(m_isGameOver)
+                return;
+            
             if (m_currentTurn == Turn.Player)
             {
                 if (m_player.IsTurnComplete)
@@ -130,14 +137,9 @@ namespace _BoardGo.Scripts.Generic
             }
             else if (m_currentTurn == Turn.Enemy)
             {
-                if (IsEnemyTurnComplete())
+                if (IsEnemyTurnComplete() || m_enemies.Count == 0)
                 {
-                    Debug.Log("Enemy Turn Complete");
                     PlayPlayerTurn();
-                }
-                else
-                {
-                    Debug.Log("Enemy Turn not complete yet");
                 }
             }
         }
@@ -150,6 +152,12 @@ namespace _BoardGo.Scripts.Generic
 
         private void PlayEnemyTurn()
         {
+            if (m_enemies.Count == 0)
+            {
+                //UpdateTurn();
+                return;
+            }
+                
             m_currentTurn = Turn.Enemy;
             foreach (var enemy in m_enemies)
             {
@@ -160,6 +168,9 @@ namespace _BoardGo.Scripts.Generic
 
         private bool IsEnemyTurnComplete()
         {
+            if (m_enemies.Count == 0)
+                return true;
+            
             foreach (var enemy in m_enemies)
             {
                 if (!enemy.IsTurnComplete && !enemy.IsDead)

@@ -26,7 +26,7 @@ namespace _BoardGo.Scripts.Enemy
 
         public void PlayTurn()
         {
-            if (m_isDead)
+            if (m_isDead || m_gameManager.IsGameOver)
             {
                 FinishTurn();
                 return;
@@ -69,6 +69,7 @@ namespace _BoardGo.Scripts.Enemy
             m_isDead = true;
             m_gameManager.Enemies.Remove(this);
             if(deathEvent != null) deathEvent.Invoke();
+            Destroy(gameObject);
         }
     }
 }

@@ -25,6 +25,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/_BoardGo/Scripts/Player/PlayerInputKeyboard.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_BoardGo/Scripts/Enemy/EnemySensor.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_BoardGo/Scripts/Board/Node.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Plugins/Pixelplacement/iTween/iTween.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_BoardGo/Scripts/Enemy/EnemyManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_BoardGo/Scripts/Player/PlayerCompass.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_BoardGo/Scripts/Generic/Mover.cs" root0="FORCE_HIGHLIGHTING" />
@@ -49,15 +50,15 @@
         <option value="$PROJECT_DIR$/Assets/_BoardGo/Scripts/Board/Node.cs" />
         <option value="$PROJECT_DIR$/Assets/_BoardGo/Scripts/Player/PlayerCompass.cs" />
         <option value="$PROJECT_DIR$/Assets/_BoardGo/Scripts/Generic/GameEvents.cs" />
-        <option value="$PROJECT_DIR$/Assets/_BoardGo/Scripts/Enemy/EnemySensor.cs" />
         <option value="$PROJECT_DIR$/Assets/_BoardGo/Scripts/Player/PlayerMover.cs" />
         <option value="$PROJECT_DIR$/Assets/_BoardGo/Scripts/Generic/Mover.cs" />
-        <option value="$PROJECT_DIR$/Assets/_BoardGo/Scripts/Enemy/EnemyManager.cs" />
         <option value="$PROJECT_DIR$/Assets/_BoardGo/Scripts/Board/Board.cs" />
         <option value="$PROJECT_DIR$/Assets/_BoardGo/Scripts/Enemy/EnemyMover.cs" />
-        <option value="$PROJECT_DIR$/Assets/_BoardGo/Scripts/Player/PlayerManager.cs" />
         <option value="$PROJECT_DIR$/Assets/_BoardGo/Scripts/Generic/TurnManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/_BoardGo/Scripts/Player/PlayerManager.cs" />
         <option value="$PROJECT_DIR$/Assets/_BoardGo/Scripts/Generic/GameManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/_BoardGo/Scripts/Enemy/EnemySensor.cs" />
+        <option value="$PROJECT_DIR$/Assets/_BoardGo/Scripts/Enemy/EnemyManager.cs" />
       </list>
     </option>
   </component>
@@ -113,7 +114,10 @@
       <workItem from="1572087288066" duration="5105000" />
       <workItem from="1572109218346" duration="8738000" />
       <workItem from="1572137056710" duration="5035000" />
-      <workItem from="1572153336481" duration="4612000" />
+      <workItem from="1572153336481" duration="5841000" />
+      <workItem from="1572238307389" duration="1412000" />
+      <workItem from="1572244170671" duration="281000" />
+      <workItem from="1572270103936" duration="1223000" />
     </task>
     <servers />
   </component>
@@ -142,19 +146,6 @@
           <properties exception="System.Threading.ThreadAbortException" displayValue="System.Threading.ThreadAbortException" />
           <option name="timeStamp" value="1" />
         </breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/_BoardGo/Scripts/Enemy/EnemySensor.cs</url>
-          <line>16</line>
-          <properties documentPath="$PROJECT_DIR$/Assets/_BoardGo/Scripts/Enemy/EnemySensor.cs" initialLine="16">
-            <startOffsets>
-              <option value="446" />
-            </startOffsets>
-            <endOffsets>
-              <option value="488" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>

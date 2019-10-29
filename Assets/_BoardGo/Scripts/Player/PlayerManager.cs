@@ -63,7 +63,7 @@ namespace _BoardGo.Scripts.Player
                         if (enemy != null)
                         {
                             enemy.Die();
-                            Destroy(enemy.gameObject);
+                            //Destroy(enemy.gameObject);
                         }
                     }
                 }

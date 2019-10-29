@@ -101,8 +101,8 @@ MonoBehaviour:
   faceDestination: 0
   destination: {x: 0, y: 0, z: 0}
   isMoving: 0
-  easeType: 10
-  moveSpeed: 2
+  easeType: 27
+  moveSpeed: 7
   rotateTime: 0.5
   iTweenDelay: 0
   finishMovementEvent:
